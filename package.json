@@ -1,0 +1,19 @@
+{
+  "name": "rallyserver",
+  "version": "1.0.0",
+  "description": "Rally Server Side",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KJongHyun/RallyServer.git"
+  },
+  "author": "JongHyeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KJongHyun/RallyServer/issues"
+  },
+  "homepage": "https://github.com/KJongHyun/RallyServer#readme"
+}
