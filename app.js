@@ -7,15 +7,23 @@ app.use(express.json());
 const hostName = '127.0.0.1';
 const port = 3000;
 
-const connection = database.createConnection({
-    host: '127.0.0.1',
-    port: 3306,
+const connection = database.createConnection ({
+    host: 'localhost',
     user: 'root',
+    port: 3306,
     password: 'root',
     database: 'rally'
 });
 
 connection.connect();
+
+connection.query('select * From user', (err, rows) => {
+    if (err)
+        throw err;
+    console.log(rows);
+});
+
+connection.end();
 
 app.route('/login').post(async (res, req) => {
 
