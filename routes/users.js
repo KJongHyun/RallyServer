@@ -3,6 +3,6 @@ const router = express.Router();
 
 router.post("/create", function (req, res) {
     
-})
+});
 
 module.exports = router;
