@@ -5,4 +5,7 @@ router.post("/create", function (req, res) {
     
 });
 
+router.post("/getUser", function(req, res) {
+
+});
 module.exports = router;
