@@ -5,4 +5,9 @@ router.post("/", function (req, res) {
     
 });
 
+router.route('/login').post(async (req, res) => {
+    req.body.id;
+    req.body.password;
+});
+
 module.exports = router;

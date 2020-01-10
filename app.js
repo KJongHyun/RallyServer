@@ -7,6 +7,15 @@ app.use(express.json());
 const hostName = '127.0.0.1';
 const port = 3000;
 
+// routes
+const index = require('./routes/index');
+const users = require('./routes/users');
+const exercises = require('./routes/exercises');
+
+app.use('/', index);
+app.use('/user', users);
+app.use('/exercise', exercises);
+
 const connection = database.createConnection ({
     host: 'localhost',
     user: 'root',
@@ -25,31 +34,6 @@ connection.query('select * From user', (err, rows) => {
 
 connection.end();
 
-app.route('/login').post(async (res, req) => {
-
-});
-
-app.route('/excerData').get(async (res, req) => {
-
-});
-
-app.route('/addExcerInfo').post(async (res, req) => {
-    //docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql
-
-
-});
-
-app.route('/getExcerInfo').get(async (res, req) => {
-
-});
-
-app.route('/updateExcerInfo').post(async (res, req) => {
-
-});
-
-app.route('/removeExcerInfo').post(async (res, req) => {
-
-});
 
 app.listen(port, hostName, () => {
     console.log(`Server is running at https://${hostName}:${port}`);
